@@ -1,0 +1,259 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width:100%;
+    height:100vh; /*1 vh=19.2px*/
+    background-color: white;
+    position:relative;
+}
+
+.navbar{
+    display:flex; /*side by side placing*/
+    justify-content: space-between;  /* to give space between parent and child */
+    width:85%;
+    margin-left : 100px;
+    align-items: center;
+}
+
+.logo{
+    width:130px
+}
+
+.litem{
+    display:inline-block; /*to make contents inline*/
+    list-style:none;   /*te remove bulletins in browsers*/
+    margin:10px 20px;
+}
+
+.alinks{
+    text-decoration: none;
+    color:black;
+    font-weight:bold;
+}
+
+/* tag:pseudoclass{property:value;} */
+
+.alinks:hover{
+    color:red;
+}
+
+.title{
+    margin-top: 13%;
+    margin-left: 8%;
+}
+
+.title-h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.stalin{
+    color: orange;
+}
+
+.cv{
+    text-decoration: none;
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    padding:10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.title-img{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    right: 30px;
+    bottom: 0px;
+
+}
+
+.title-img img{
+    position: absolute;
+    height: 80%;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%); /* left value kodutha scroll varum ath remove aakem venam ennal initial aayitt oru value enthayalum venam  */
+    transition:bottom 1s , left 2s ; /* to make the transition smooth */
+}
+
+.title-img:hover #shape{
+    bottom: 70px;
+}
+
+.title-img:hover #girl{
+    left: 40%;
+}
+
+#about{
+    margin: 18% 8% 0px 8%;
+}
+
+.heading{
+    text-align: center;
+}
+
+.heading h2{
+    font-size: 30px;
+}
+
+.heading span{
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.about-content{
+    display: grid; /* almost same as display:flex; but as rows and columns*/
+    grid-template-columns: repeat(2,1fr); /* 1fr=255px */
+    gap: 2rem; /* 1rem=16px */
+    margin-top: 2rem;
+}
+
+.about-img img{
+    width: 80%;   
+}
+
+.about-details{
+    font-size: 19px;
+    font-weight: 400;
+    text-align: justify; /* to make paragraph in a perfect width */
+}
+
+.informations{
+    margin-top: 35px;
+}
+
+.info-box{
+    align-items: center;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.info-box span{
+    margin-left: 20px;
+}
+
+#skills{
+    margin: 8% 8% 0px 8%;
+}
+
+.skill-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-img img{
+    width: 90%;
+    padding-left: 4rem;
+}
+
+.bar-container{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1rem 0px;
+    margin-bottom: 1rem;
+    position:relative; /* ithinte thazhe varunna base bar nte position absolute kodukkanam so athinte parent postn must be  absolute  */
+}
+
+.base-bar{
+    width: 100%;
+    height:0.5rem;
+    background-color: #000000;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.html-bar{
+    background-color:orange;
+    width: 95%;
+}
+.css-bar{
+    background-color:orange;
+    width: 88%;
+}
+.react-bar{
+    background-color:orange;
+    width: 89%;
+}
+.js-bar{
+    background-color:orange;
+    width: 85%;
+}
+
+.icon-set{
+    display: flex;  
+    align-items: center;
+    justify-content:center;
+    margin-top: 3%;
+}
+
+.icon, .up-arrow{
+    width: 50px;
+    height: 50px;
+    /* border:1px solid #000000; */
+    border-radius: 50%;
+    display: flex; /* these 3 are used to make an element in the center of a div */
+    align-items: center; /* these 3 are used to make an element in the center of a div */
+    justify-content: center; /* these 3 are used to make an element in the center of a div */
+    margin: 0px 10px;
+    padding-top: 3px;
+}
+
+.icon i{
+    color: #000000;
+    font-size: 30px;
+}
+
+.icon:hover{
+    background-image:linear-gradient(to bottom right,yellow,red); /* To use gradient colors */
+}
+
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s; /* infinite = doesnt stop the animation */
+}
+
+@keyframes shake{
+    10% {
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-10deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-10deg);
+    }
+}
+
+.up-arrow{
+    float: right;
+    margin: 0px 20px 50px 0px;
+    background-image:linear-gradient(to bottom right,yellow,red); /* To use gradient colors */
+}
+
+.up-arrow:hover i{
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth; /* used for smooth scrolling */
+}
+
+footer p{
+    margin-top: 30px;
+}
